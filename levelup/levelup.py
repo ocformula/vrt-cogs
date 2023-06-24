@@ -625,7 +625,7 @@ class LevelUp(UserCommands, Generator, commands.Cog, metaclass=CompositeMetaClas
                     channelembed = discord.Embed(description=channeltxt, color=member.color)
                     channelembed.set_author(name=name, icon_url=pfp)
                     if mention:
-                        await channel.send(mentionuser, embed=channelembed)
+                        await channel.send( f"{member.mention}님, 레벨 {new_level} 달성을 축하해요! 🥳")
                     else:
                         await channel.send(embed=channelembed)
 
